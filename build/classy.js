@@ -2,7 +2,7 @@
 *
 *   Classy.js
 *   @version: 1.0.0
-*   @built on 2019-02-08 13:26:49
+*   @built on 2019-03-19 14:46:38
 *
 *   Object-Oriented micro-framework for JavaScript
 *   https://github.com/foo123/classy.js
@@ -15,7 +15,7 @@ else if ( ('function'===typeof define)&&define.amd&&('function'===typeof require
     define(name,['module'],function(module){factory.moduleUri = module.uri; return factory.call(root);});
 else if ( !(name in root) ) /* Browser/WebWorker/.. */
     (root[name] = factory.call(root)||1)&&('function'===typeof(define))&&define.amd&&define(function(){return root[name];} );
-}(  /* current root */          this, 
+}(  /* current root */          'undefined' !== typeof self ? self : this, 
     /* module name */           "Classy",
     /* module factory */        function ModuleFactory__Classy( ){
 /* main code starts here */
@@ -24,7 +24,7 @@ else if ( !(name in root) ) /* Browser/WebWorker/.. */
 *
 *   Classy.js
 *   @version: 1.0.0
-*   @built on 2019-02-08 13:26:49
+*   @built on 2019-03-19 14:46:38
 *
 *   Object-Oriented micro-framework for JavaScript
 *   https://github.com/foo123/classy.js
